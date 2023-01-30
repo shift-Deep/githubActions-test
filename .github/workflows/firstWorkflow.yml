@@ -4,5 +4,15 @@ jobs:
   first:
     runs-on: ubuntu-latest
     steps:
-      - name: first1
-        run: echo "hello"
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: test code
+        run: npm run test
+      - name: build code
+        run: npm run build
+      - name: deploy code
+        run: echo "deploying..." 
