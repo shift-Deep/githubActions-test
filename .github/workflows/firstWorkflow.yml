@@ -1,8 +1,8 @@
-name:"first"
+name:first
 on:push
 jobs:
   first:
-    runs-on:"ubuntu-latest"
+    runs-on:ubuntu-latest
     steps:
-      -name:"first1"
+      -name:first1
       run:echo "hello"
