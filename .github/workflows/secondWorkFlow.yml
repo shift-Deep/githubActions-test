@@ -30,9 +30,9 @@ jobs:
         run: npm ci
       - name: build code
         run: npm run build
-    Fourth:
-      needs: Third
-      runs-on: ubuntu-latest
+  Fourth:
+    needs: Third
+    runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v3
