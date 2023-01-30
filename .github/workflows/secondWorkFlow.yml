@@ -1,0 +1,43 @@
+name: secondWorkFlow
+on: push
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm ci
+      - name: Lint
+        run: npm run lint 
+  second:
+    needs: first
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm ci
+      - name: test code
+        run: npm run test
+  Third:
+    needs: second
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm ci
+      - name: build code
+        run: npm run build
+    Fourth:
+      needs: Third
+      runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install dep
+        run: npm ci
+      - name: deploy code
+        run: echo "deploying..." 
+
