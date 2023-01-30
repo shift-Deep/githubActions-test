@@ -1,8 +1,8 @@
 name:"first"
 on:push
-  jobs:
-    first:
-      runs-on:"ubuntu-latest"
-      steps:
-        -name:"first1"
-        run:echo "hello"
+jobs:
+  first:
+    runs-on:"ubuntu-latest"
+    steps:
+      -name:"first1"
+      run:echo "hello"
