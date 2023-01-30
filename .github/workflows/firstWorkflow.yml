@@ -4,5 +4,5 @@ jobs:
   first:
     runs-on:ubuntu-latest
     steps:
-      -name:first1
-      run:echo "hello"
+      -name: first1
+      run: echo "hello"
