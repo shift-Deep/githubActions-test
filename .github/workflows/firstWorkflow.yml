@@ -15,5 +15,5 @@ jobs:
       - name: build code
         run: npm run build
       - name: deploy code
-        run: echo "deploying..."
+
         run: echo "${{ github }}"
